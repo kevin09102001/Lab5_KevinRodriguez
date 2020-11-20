@@ -59,9 +59,10 @@ public class maestros {
 
     @Override
     public String toString() {
-        return Nombre ;
+        return "maestros{" + "Nombre=" + Nombre + ", apellido=" + apellido + ", salario=" + salario + ", edad=" + edad + '}';
     }
 
+   
     
     
 }

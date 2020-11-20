@@ -66,5 +66,12 @@ public class clases {
     public void setAire_acondicionado(String aire_acondicionado) {
         this.aire_acondicionado = aire_acondicionado;
     }
+
+    @Override
+    public String toString() {
+        return "clases{" + "Nombre=" + Nombre + ", seccion=" + seccion + ", edificio=" + edificio + ", salon=" + salon + ", aire_acondicionado=" + aire_acondicionado + '}';
+    }
+
+   
     
 }

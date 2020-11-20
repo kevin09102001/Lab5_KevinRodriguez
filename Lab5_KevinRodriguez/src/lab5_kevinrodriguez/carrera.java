@@ -59,7 +59,10 @@ public class carrera {
 
     @Override
     public String toString() {
-        return nombre;
+        return "carrera{" + "nombre=" + nombre + ", Facultad=" + Facultad + ", Costo_Mensual=" + Costo_Mensual + ", Jefe_de_carrera=" + Jefe_de_carrera + '}';
     }
+
+    
+   
     
 }
