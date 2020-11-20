@@ -13,14 +13,14 @@ public class estudiantes {
     public String nombre;
     public String apellido;
     public String Numero_Cuenta;
-    public String Edad;
+    public int Edad;
     public String Genero;
     public String Carrera;
 
     public estudiantes() {
     }
 
-    public estudiantes(String nombre, String apellido, String Numero_Cuenta, String Edad, String Genero, String Carrera) {
+    public estudiantes(String nombre, String apellido, String Numero_Cuenta, int Edad, String Genero, String Carrera) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.Numero_Cuenta = Numero_Cuenta;
@@ -53,11 +53,11 @@ public class estudiantes {
         this.Numero_Cuenta = Numero_Cuenta;
     }
 
-    public String getEdad() {
+    public int getEdad() {
         return Edad;
     }
 
-    public void setEdad(String Edad) {
+    public void setEdad(int Edad) {
         this.Edad = Edad;
     }
 
@@ -76,5 +76,11 @@ public class estudiantes {
     public void setCarrera(String Carrera) {
         this.Carrera = Carrera;
     }
+
+    @Override
+    public String toString() {
+        return nombre;
+    }
+    
     
 }
