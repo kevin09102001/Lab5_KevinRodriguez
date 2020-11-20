@@ -56,5 +56,10 @@ public class carrera {
     public void setJefe_de_carrera(String Jefe_de_carrera) {
         this.Jefe_de_carrera = Jefe_de_carrera;
     }
+
+    @Override
+    public String toString() {
+        return nombre;
+    }
     
 }

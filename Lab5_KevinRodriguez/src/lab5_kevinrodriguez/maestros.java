@@ -14,17 +14,15 @@ public class maestros {
     public String apellido;
     public String salario;
     public int edad;
-    public String lista_clases;
 
     public maestros() {
     }
 
-    public maestros(String Nombre, String apellido, String salario, int edad, String lista_clases) {
+    public maestros(String Nombre, String apellido, String salario, int edad) {
         this.Nombre = Nombre;
         this.apellido = apellido;
         this.salario = salario;
         this.edad = edad;
-        this.lista_clases = lista_clases;
     }
 
     public String getNombre() {
@@ -59,13 +57,11 @@ public class maestros {
         this.edad = edad;
     }
 
-    public String getLista_clases() {
-        return lista_clases;
+    @Override
+    public String toString() {
+        return Nombre ;
     }
 
-    public void setLista_clases(String lista_clases) {
-        this.lista_clases = lista_clases;
-    }
     
     
 }
