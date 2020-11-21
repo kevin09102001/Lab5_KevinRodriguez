@@ -297,7 +297,7 @@ public class principal extends javax.swing.JFrame {
 
         edificio.setModel(new javax.swing.SpinnerNumberModel(0, 0, 20, 1));
 
-        jLabel23.setText("PARA ELIMINAR PRECIONAR LA TECLA DELETE");
+        jLabel23.setText("PARA ELIMINAR LA LISTA QUE DESEE PRECIONAR LA TECLA DELETE");
 
         jLabel24.setText("PARA PODER MODIFICAR RELLENAR LA CASILLA QUE DESEA MODIFICAR ANTES DE DARLE MODIFICAR");
 
@@ -666,10 +666,10 @@ public class principal extends javax.swing.JFrame {
     DefaultTreeModel a=(DefaultTreeModel) arbol1.getModel();
         DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) a.getRoot();
         DefaultMutableTreeNode nodo;
-        nodo=new DefaultMutableTreeNode(new carrera(carrer.getSelectedItem().toString(),facul.getSelectedItem().toString(),costo.getText(),jefe.getText()));
+        nodo=new DefaultMutableTreeNode(new carrera(carrer.getSelectedItem().toString(),facul.getSelectedItem().toString(),costo.getText(),jefe.getText())) ;
         DefaultMutableTreeNode nodo2;
         nodo2=new DefaultMutableTreeNode (new estudiantes(nombre.getText(),apellido.getText(),numcuenta.getSelectedItem().toString(),
-                (Integer)edad.getValue(),genero.getSelectedItem().toString(),carrer.getSelectedItem().toString()));
+        (Integer)edad.getValue(),genero.getSelectedItem().toString(),carrer.getSelectedItem().toString()));
         DefaultMutableTreeNode carreraa;
         carreraa=new DefaultMutableTreeNode(carrer.getSelectedItem().toString());
          DefaultMutableTreeNode estu;

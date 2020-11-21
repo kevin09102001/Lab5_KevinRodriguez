@@ -811,7 +811,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel23">
           <Properties>
-            <Property name="text" type="java.lang.String" value="PARA ELIMINAR PRECIONAR LA TECLA DELETE"/>
+            <Property name="text" type="java.lang.String" value="PARA ELIMINAR LA LISTA QUE DESEE PRECIONAR LA TECLA DELETE"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel24">
