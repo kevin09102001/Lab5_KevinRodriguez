@@ -17,7 +17,7 @@ import javax.swing.tree.DefaultTreeModel;
  * @author Kevin
  */
 public class principal extends javax.swing.JFrame {
-
+static String k="";
     /**
      * Creates new form principal
      */
@@ -110,6 +110,11 @@ public class principal extends javax.swing.JFrame {
         eliminar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 eliminarMouseClicked(evt);
+            }
+        });
+        eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarActionPerformed(evt);
             }
         });
         mod.add(eliminar);
@@ -233,6 +238,11 @@ public class principal extends javax.swing.JFrame {
 
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("root");
         arbol1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        arbol1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                arbol1KeyPressed(evt);
+            }
+        });
         jScrollPane3.setViewportView(arbol1);
 
         agregar2.setText("Agregar carrera");
@@ -428,16 +438,18 @@ public class principal extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jefe))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel23)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(167, 167, 167)
-                                .addComponent(arb))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(143, 143, 143)
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel23)))
                 .addContainerGap(24, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(451, 451, 451))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(arb)
+                        .addGap(479, 479, 479))))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                     .addContainerGap(291, Short.MAX_VALUE)
@@ -541,27 +553,24 @@ public class principal extends javax.swing.JFrame {
                         .addGap(32, 32, 32)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(arb))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(41, 41, 41)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
                             .addComponent(jScrollPane1))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addComponent(jLabel23))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(arb)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel23)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(441, 441, 441)
                     .addComponent(jLabel24)
-                    .addContainerGap(609, Short.MAX_VALUE)))
+                    .addContainerGap(620, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -581,9 +590,10 @@ public class principal extends javax.swing.JFrame {
     private void agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarActionPerformed
         DefaultListModel modelo = (DefaultListModel) lista.getModel();
         modelo.addElement(new estudiantes(nombre.getText(),apellido.getText(),numcuenta.getSelectedItem().toString(),
-                (Integer)edad.getValue(),genero.getSelectedItem().toString(),carrer.getSelectedItem().toString()));
+                (Integer)edad.getValue(),genero.getSelectedItem().toString(),facul.getSelectedItem().toString()));
+        k=nombre.getText();
         lista.setModel(modelo);
-        nombre.setText(null);
+        nombre.setText("");
         apellido.setText(null);
         edad.setValue(15);
         
@@ -641,8 +651,6 @@ public class principal extends javax.swing.JFrame {
             ((clases)modificar.get(lista4.getSelectedIndex())).setAire_acondicionado(si.getSelectedItem().toString());
             lista4.setModel(modificar);
         }
-         
-        
     }//GEN-LAST:event_ModificarActionPerformed
 
     private void listaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaMouseClicked
@@ -665,19 +673,11 @@ public class principal extends javax.swing.JFrame {
     private void arbMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_arbMouseClicked
     DefaultTreeModel a=(DefaultTreeModel) arbol1.getModel();
         DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) a.getRoot();
-        DefaultMutableTreeNode nodo;
-        nodo=new DefaultMutableTreeNode(new carrera(carrer.getSelectedItem().toString(),facul.getSelectedItem().toString(),costo.getText(),jefe.getText())) ;
-        DefaultMutableTreeNode nodo2;
-        nodo2=new DefaultMutableTreeNode (new estudiantes(nombre.getText(),apellido.getText(),numcuenta.getSelectedItem().toString(),
-        (Integer)edad.getValue(),genero.getSelectedItem().toString(),carrer.getSelectedItem().toString()));
-        DefaultMutableTreeNode carreraa;
-        carreraa=new DefaultMutableTreeNode(carrer.getSelectedItem().toString());
-         DefaultMutableTreeNode estu;
-         estu=new DefaultMutableTreeNode(nombre.getText());
-         nodo2.add(estu);
-         carreraa.add(estu);
-         raiz.add(carreraa);
-         a.reload();
+       DefaultMutableTreeNode carrera=new DefaultMutableTreeNode(carrer.getSelectedItem().toString());
+        DefaultMutableTreeNode nom=new DefaultMutableTreeNode(k);
+        carrera.add(nom);
+        raiz.add(carrera);
+        a.reload();
     }//GEN-LAST:event_arbMouseClicked
 
     private void lista2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lista2MouseClicked
@@ -783,6 +783,15 @@ public class principal extends javax.swing.JFrame {
         }
       }
     }//GEN-LAST:event_lista4KeyPressed
+
+    private void eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarActionPerformed
+        
+     
+    }//GEN-LAST:event_eliminarActionPerformed
+
+    private void arbol1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_arbol1KeyPressed
+        
+    }//GEN-LAST:event_arbol1KeyPressed
     public String[] getcarre(String facul){
         String [] carrera=new String[5];
         if (facul.equals("Licenciatura")) {
