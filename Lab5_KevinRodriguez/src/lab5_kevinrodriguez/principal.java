@@ -120,6 +120,11 @@ public class principal extends javax.swing.JFrame {
         modarbol.add(modificar);
 
         Eliminar.setText("Eliminar");
+        Eliminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EliminarMouseClicked(evt);
+            }
+        });
         modarbol.add(Eliminar);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -191,6 +196,11 @@ public class principal extends javax.swing.JFrame {
                 listaMouseClicked(evt);
             }
         });
+        lista.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                listaKeyPressed(evt);
+            }
+        });
         jScrollPane1.setViewportView(lista);
 
         jLabel14.setText("Lista de clases que imparte: ");
@@ -244,6 +254,11 @@ public class principal extends javax.swing.JFrame {
                 lista2MouseClicked(evt);
             }
         });
+        lista2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lista2KeyPressed(evt);
+            }
+        });
         jScrollPane4.setViewportView(lista2);
 
         agregar3.setText("Agregar maestros");
@@ -259,6 +274,11 @@ public class principal extends javax.swing.JFrame {
                 lista3MouseClicked(evt);
             }
         });
+        lista3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lista3KeyPressed(evt);
+            }
+        });
         jScrollPane5.setViewportView(lista3);
 
         agregar4.setText("Agregar clase");
@@ -272,6 +292,11 @@ public class principal extends javax.swing.JFrame {
         lista4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lista4MouseClicked(evt);
+            }
+        });
+        lista4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lista4KeyPressed(evt);
             }
         });
         jScrollPane6.setViewportView(lista4);
@@ -617,7 +642,7 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_listaMouseClicked
 
     private void eliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eliminarMouseClicked
-       if (lista.getSelectedIndex()>= 0) {
+        if (lista.getSelectedIndex()>= 0) {
             DefaultListModel modificar =(DefaultListModel) lista.getModel();
             modificar.remove(lista.getSelectedIndex());
             lista.setModel(modificar);
@@ -636,6 +661,7 @@ public class principal extends javax.swing.JFrame {
         carreraa=new DefaultMutableTreeNode(carrer.getSelectedItem().toString());
          DefaultMutableTreeNode estu;
          estu=new DefaultMutableTreeNode(nombre.getText());
+         nodo2.add(estu);
          carreraa.add(estu);
          raiz.add(carreraa);
          a.reload();
@@ -699,6 +725,50 @@ public class principal extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_lista4MouseClicked
+
+    private void EliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarMouseClicked
+        
+    }//GEN-LAST:event_EliminarMouseClicked
+
+    private void listaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_listaKeyPressed
+        if (evt.getKeyCode()==evt.VK_DELETE) {
+            if (lista.getSelectedIndex()>= 0) {
+            DefaultListModel modificar =(DefaultListModel) lista.getModel();
+            modificar.remove(lista.getSelectedIndex());
+            lista.setModel(modificar);
+        }
+      }
+    }//GEN-LAST:event_listaKeyPressed
+
+    private void lista2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lista2KeyPressed
+       if (evt.getKeyCode()==evt.VK_DELETE) {
+            if (lista2.getSelectedIndex()>= 0) {
+            DefaultListModel modificar =(DefaultListModel) lista2.getModel();
+            modificar.remove(lista2.getSelectedIndex());
+            lista2.setModel(modificar);
+        }
+      }
+    }//GEN-LAST:event_lista2KeyPressed
+
+    private void lista3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lista3KeyPressed
+        if (evt.getKeyCode()==evt.VK_DELETE) {
+            if (lista3.getSelectedIndex()>= 0) {
+            DefaultListModel modificar =(DefaultListModel) lista3.getModel();
+            modificar.remove(lista3.getSelectedIndex());
+            lista3.setModel(modificar);
+        }
+      }
+    }//GEN-LAST:event_lista3KeyPressed
+
+    private void lista4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lista4KeyPressed
+      if (evt.getKeyCode()==evt.VK_DELETE) {
+            if (lista4.getSelectedIndex()>= 0) {
+            DefaultListModel modificar =(DefaultListModel) lista4.getModel();
+            modificar.remove(lista4.getSelectedIndex());
+            lista4.setModel(modificar);
+        }
+      }
+    }//GEN-LAST:event_lista4KeyPressed
     public String[] getcarre(String facul){
         String [] carrera=new String[5];
         if (facul.equals("Licenciatura")) {
