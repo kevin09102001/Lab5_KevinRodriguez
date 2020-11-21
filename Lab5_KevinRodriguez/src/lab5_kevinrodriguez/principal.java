@@ -98,6 +98,7 @@ public class principal extends javax.swing.JFrame {
         jScrollPane6 = new javax.swing.JScrollPane();
         lista4 = new javax.swing.JList<>();
         edificio = new javax.swing.JSpinner();
+        jLabel23 = new javax.swing.JLabel();
 
         Modificar.setText("Modificar\n");
         Modificar.addActionListener(new java.awt.event.ActionListener() {
@@ -277,6 +278,8 @@ public class principal extends javax.swing.JFrame {
 
         edificio.setModel(new javax.swing.SpinnerNumberModel(0, 0, 20, 1));
 
+        jLabel23.setText("PARA PODER MODIFICAR RELLENAR LA CASILLA QUE DESEA MODIFICAR ANTES DE DARLE MODIFICAR");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -291,6 +294,24 @@ public class principal extends javax.swing.JFrame {
                 .addGap(204, 204, 204))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(54, 54, 54)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(97, 97, 97)
+                                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(117, 117, 117)
+                                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(agregar2)
+                                .addGap(152, 152, 152)
+                                .addComponent(agregar3)
+                                .addGap(229, 229, 229)
+                                .addComponent(agregar4))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -337,11 +358,12 @@ public class principal extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel14)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 608, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(agregar)))
-                        .addGap(97, 97, 97)
+                        .addGap(78, 78, 78)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel16)
@@ -364,9 +386,7 @@ public class principal extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel20)
                                 .addGap(26, 26, 26)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(agregar4)
-                                    .addComponent(si, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(si, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -390,27 +410,9 @@ public class principal extends javax.swing.JFrame {
                         .addGap(446, 446, 446)
                         .addComponent(arb))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(418, 418, 418)
+                        .addGap(428, 428, 428)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(62, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(78, 78, 78)
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(agregar2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(agregar3)
-                        .addGap(333, 333, 333))))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -494,7 +496,9 @@ public class principal extends javax.swing.JFrame {
                                 .addGap(33, 33, 33)
                                 .addComponent(jLabel21))
                             .addComponent(costo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(32, 32, 32)
+                .addGap(3, 3, 3)
+                .addComponent(jLabel23)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel22)
                     .addComponent(jefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -504,16 +508,21 @@ public class principal extends javax.swing.JFrame {
                     .addComponent(agregar2)
                     .addComponent(agregar3)
                     .addComponent(agregar4))
-                .addGap(41, 41, 41)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
-                    .addComponent(jScrollPane5)
-                    .addComponent(jScrollPane4)
-                    .addComponent(jScrollPane1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(arb)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(arb)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
@@ -562,22 +571,36 @@ public class principal extends javax.swing.JFrame {
     private void ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarActionPerformed
         if (lista.getSelectedIndex()>= 0) {
             DefaultListModel modificar =(DefaultListModel) lista.getModel();
-            ((estudiantes)modificar.get(lista.getSelectedIndex())).setNombre(JOptionPane.showInputDialog("nombre"));
+            ((estudiantes)modificar.get(lista.getSelectedIndex())).setNombre(nombre.getText());
+            ((estudiantes)modificar.get(lista.getSelectedIndex())).setApellido(apellido.getText());
+            ((estudiantes)modificar.get(lista.getSelectedIndex())).setNumero_Cuenta(numcuenta.getSelectedItem().toString());
+            ((estudiantes)modificar.get(lista.getSelectedIndex())).setEdad((Integer)edad.getValue());
+            ((estudiantes)modificar.get(lista.getSelectedIndex())).setGenero(genero.getSelectedItem().toString());
+            ((estudiantes)modificar.get(lista.getSelectedIndex())).setCarrera(carrer.getSelectedItem().toString());
             lista.setModel(modificar);
         }
         if (lista2.getSelectedIndex()>= 0) {
             DefaultListModel modificar =(DefaultListModel) lista2.getModel();
-            ((carrera)modificar.get(lista2.getSelectedIndex())).setNombre(JOptionPane.showInputDialog("nombre"));
+            ((carrera)modificar.get(lista2.getSelectedIndex())).setNombre(nombrem.getText());
+            ((carrera)modificar.get(lista2.getSelectedIndex())).setFacultad(facul.getSelectedItem().toString());
+            ((carrera)modificar.get(lista2.getSelectedIndex())).setCosto_Mensual(costo.getText());
+            ((carrera)modificar.get(lista2.getSelectedIndex())).setJefe_de_carrera(jefe.getText());
             lista2.setModel(modificar);
         }
         if (lista3.getSelectedIndex()>= 0) {
             DefaultListModel modificar =(DefaultListModel) lista3.getModel();
-            ((maestros)modificar.get(lista3.getSelectedIndex())).setNombre(JOptionPane.showInputDialog("nombre"));
+            ((maestros)modificar.get(lista3.getSelectedIndex())).setNombre(nombrem.getText());
+            ((maestros)modificar.get(lista3.getSelectedIndex())).setApellido(apellidom.getText());
+            ((maestros)modificar.get(lista3.getSelectedIndex())).setEdad((Integer)edadm.getValue());
             lista3.setModel(modificar);
         }
         if (lista4.getSelectedIndex()>= 0) {
             DefaultListModel modificar =(DefaultListModel) lista4.getModel();
-            ((clases)modificar.get(lista3.getSelectedIndex())).setNombre(JOptionPane.showInputDialog("nombre"));
+            ((clases)modificar.get(lista4.getSelectedIndex())).setNombre(nombrec.getText());
+            ((clases)modificar.get(lista4.getSelectedIndex())).setSeccion(seccion.getText());
+            ((clases)modificar.get(lista4.getSelectedIndex())).setEdificio((Integer)edificio.getValue());
+            ((clases)modificar.get(lista4.getSelectedIndex())).setSalon(salon.getText());
+            ((clases)modificar.get(lista4.getSelectedIndex())).setAire_acondicionado(si.getSelectedItem().toString());
             lista4.setModel(modificar);
         }
          
@@ -602,7 +625,7 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_eliminarMouseClicked
 
     private void arbMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_arbMouseClicked
-        DefaultTreeModel a=(DefaultTreeModel) arbol1.getModel();
+    DefaultTreeModel a=(DefaultTreeModel) arbol1.getModel();
         DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) a.getRoot();
         DefaultMutableTreeNode nodo;
         nodo=new DefaultMutableTreeNode(new carrera(carrer.getSelectedItem().toString(),facul.getSelectedItem().toString(),costo.getText(),jefe.getText()));
@@ -613,8 +636,8 @@ public class principal extends javax.swing.JFrame {
         carreraa=new DefaultMutableTreeNode(carrer.getSelectedItem().toString());
          DefaultMutableTreeNode estu;
          estu=new DefaultMutableTreeNode(nombre.getText());
-         nodo.add(carreraa);
          carreraa.add(estu);
+         raiz.add(carreraa);
          a.reload();
     }//GEN-LAST:event_arbMouseClicked
 
@@ -769,6 +792,7 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
